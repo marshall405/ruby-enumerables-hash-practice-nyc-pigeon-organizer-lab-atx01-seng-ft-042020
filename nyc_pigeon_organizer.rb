@@ -1,7 +1,7 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
-  
-  data.reduce({}) do |memo, (outer_key, attr_hash)|
+  new_hash = {}
+  data.reduce(new_hash) do |memo, (outer_key, attr_hash)|
     
     attr_hash.each do |attr_key, attr_arr|
       attr_arr.each do |name|
