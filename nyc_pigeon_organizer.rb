@@ -1,6 +1,22 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   
+  data.reduce({}) do |memo, (outer_key, attr_hash)|
+    
+    attr_hash.each do |attr_key, attr_arr|
+      attr_arr.each do |name|
+        if memo[name] 
+          memo[name][outer_key] << attr_key
+        else
+          memo[name] = {
+            :color => [],
+            :gender => [],
+            :lives => []
+          }
+        end
+      end
+    end
+  end
 end
 
 
@@ -14,4 +30,10 @@ end
 # key.each, iterate over each key hash - key and array 
 
 # iterate over arrays, check if name in array is a key in the new_hash
-# if it exists we can add 
+# if it exists we can add element to new_hash[name][attr] => which is an array
+
+#if it doesnt exist we must create it. new_hash[name] = {
+#   color => []
+#   gender => []
+#   lives => []
+# }
