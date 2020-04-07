@@ -11,9 +11,9 @@ def nyc_pigeon_organizer(data)
           memo[name][outer_key] << attr_key
         else
           memo[name] = {
-            :color => [],
-            :gender => [],
-            :lives => []
+            "color" => [],
+            "gender" => [],
+            "lives" => []
           }
         end
       end
