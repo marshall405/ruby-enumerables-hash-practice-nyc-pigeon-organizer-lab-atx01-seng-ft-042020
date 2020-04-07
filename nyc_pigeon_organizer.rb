@@ -8,8 +8,6 @@ def nyc_pigeon_organizer(data)
 
         if memo[name] 
           memo[name][outer_key] << attr_key
-          puts memo[name]
-          puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         else
           memo[name] = {
             "color" => [],
