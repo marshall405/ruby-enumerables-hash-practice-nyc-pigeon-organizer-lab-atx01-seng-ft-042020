@@ -5,7 +5,7 @@ def nyc_pigeon_organizer(data)
     
     attr_hash.each do |attr_key, attr_arr|
       attr_arr.each do |name|
-        puts memo 
+        puts name
         puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         if memo[name] 
           memo[name][outer_key] << attr_key
