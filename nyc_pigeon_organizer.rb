@@ -1,22 +1,23 @@
 def nyc_pigeon_organizer(data)
   # write your code here!
   new_hash = {}
-  data.reduce(new_hash) do |memo, (outer_key, attr_hash)|
-    
-    attr_hash.each do |attr_key, attr_arr|
-      attr_arr.each do |name|
+  data.each do |outer_key, attr_hash|
 
-        if memo[name] 
-          memo[name][outer_key] << attr_key
+    attr_hash.each do |attr_key, attr_arr|
+
+      attr_arr.each do |name|
+        if new_hash[name] 
+          new_hash[name][outer_key] << attr_key.to_s
         else
-          memo[name] = {
-            "color" => [],
-            "gender" => [],
-            "lives" => []
+          new_hash[name] = {
+            :color => [],
+            :gender => [],
+            :lives => []
           }
         end
       end
     end
+
   end
   new_hash
 end
