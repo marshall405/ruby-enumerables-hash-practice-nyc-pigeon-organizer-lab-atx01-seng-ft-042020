@@ -14,6 +14,7 @@ def nyc_pigeon_organizer(data)
             :gender => [],
             :lives => []
           }
+          new_hash[name][outer_key] << attr_key.to_s
         end
       end
     end
